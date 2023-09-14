@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+body {
+  // padding: 20px;
+
+  // margin: 0;
+  // width: 100vw;
+  font-family: "Lato", sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body {
+  height: 100%;
+
+  .rxjs-example {
+    background-color: white;
+    padding: 2rem;
+
+    width: 80%;
+    margin: 2rem auto;
+    border-radius: 0.8rem;
+    box-shadow: 10px 10px 0 rgba(156, 4, 13, 1);
+
+    .example-title {
+      color: rgb(213, 3, 17);
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+}

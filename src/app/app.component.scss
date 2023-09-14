@@ -1,0 +1,28 @@
+.talabyah {
+  // width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  margin: 2rem;
+
+  border-radius: 2rem;
+  background: rgb(156, 4, 13);
+  background: linear-gradient(
+    0deg,
+    rgba(156, 4, 13, 1) 0%,
+    rgba(216, 9, 22, 1) 86%
+  );
+
+  .nav {
+    background-color: white;
+    border-radius: 15px;
+    // margin: 30px 20px;
+    padding: 10px 20px;
+
+    box-shadow: 10px 10px 0 rgba(156, 4, 13, 1);
+
+    .talabyah-logo {
+      margin: 0 auto;
+      width: clamp(250px, 30%, 400px);
+    }
+  }
+}

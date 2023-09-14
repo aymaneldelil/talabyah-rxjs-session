@@ -1,0 +1,15 @@
+<section class="rxjs-example">
+  <h2 class="example-title">Debounce Time</h2>
+
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      [formControl]="debounceTime"
+      placeholder="Type To Search ..."
+    />
+  </mat-form-field>
+
+  <p *ngIf="searchString$">
+    {{ searchString$ | async }}
+  </p>
+</section>
