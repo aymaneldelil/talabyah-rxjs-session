@@ -1,0 +1,21 @@
+<section class="rxjs-example">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-description>
+        <h2 class="example-title">Debounce Time</h2>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        [formControl]="debounceTime"
+        placeholder="Type To Search ..."
+      />
+    </mat-form-field>
+
+    <p *ngIf="searchString$">
+      {{ searchString$ | async }}
+    </p>
+  </mat-expansion-panel>
+</section>

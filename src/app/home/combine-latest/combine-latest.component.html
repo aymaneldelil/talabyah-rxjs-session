@@ -1,0 +1,85 @@
+<section class="rxjs-example">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-description>
+        <h2 class="example-title">Combine Latest</h2>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <ng-container *ngIf="!isGameGenerated; else startGame">
+      <div class="generate-game">
+        <mat-form-field appearance="outline">
+          <mat-label>Generate Player Live Count</mat-label>
+          <input matInput type="number" [formControl]="playerCountControl" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Generate Number Of Chicken</mat-label>
+          <input matInput type="number" [formControl]="chicksCountControl" />
+        </mat-form-field>
+
+        <button mat-stroked-button (click)="generateGame()">
+          Generate Game
+        </button>
+      </div>
+    </ng-container>
+
+    <ng-template #startGame>
+      <!-- Game State  -->
+      <h1 class="game-state">{{ gameState$ | async }}</h1>
+
+      <ng-container
+        *ngIf="
+          (playerLives$ | async)?.length && (remainingChickens$ | async)?.length
+        "
+      >
+        <!-- Player Live -->
+        <div *ngIf="(playerLives$ | async)?.length">
+          <ng-container *ngFor="let live of playerLives$ | async">
+            <img
+              src="./assets/heart-png.png"
+              width="70"
+              style="padding: 10px"
+            />
+          </ng-container>
+        </div>
+
+        <!-- Chikens -->
+        <div *ngIf="(remainingChickens$ | async)?.length">
+          <div class="chicken-box">
+            <ng-container *ngFor="let chicken of remainingChickens$ | async">
+              <img
+                src="./assets/chicken-webp.webp"
+                width="80"
+                style="padding: 10px"
+              />
+            </ng-container>
+          </div>
+        </div>
+        <!-- Plane  -->
+        <div class="plane">
+          <img src="./assets/plane.webp" width="70" style="padding: 10px" />
+        </div>
+        <!-- Actions -->
+
+        <div class="actions">
+          <button mat-stroked-button color="warn" (click)="killPlayer()">
+            <img src="./assets/broken-heart.png" width="30" />
+            Mot Ya Player
+          </button>
+
+          <button mat-stroked-button color="warn" (click)="killChicken()">
+            <img src="./assets/shooting.png" width="40" srcset="" />
+            Moty Ya Far5a
+          </button>
+        </div>
+      </ng-container>
+    </ng-template>
+    <!-- <h1>
+      {{ sharedData$ | async | json }}
+    </h1>
+    <h1>
+      {{ sharedData$ | async | json }}
+    </h1> -->
+  </mat-expansion-panel>
+</section>

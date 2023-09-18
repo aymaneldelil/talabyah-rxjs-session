@@ -1,0 +1,65 @@
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveLoop {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 10px);
+  }
+  50% {
+    transform: translate(-20px, -10px);
+  }
+  75% {
+    transform: translate(10px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.generate-game {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.game-state {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+.chicken-box {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  img {
+    transition: all ease-in-out 0.3s;
+    animation: moveLoop 3s infinite ease-in-out;
+  }
+}
+
+.plane {
+  display: flex;
+  justify-content: center;
+  img {
+    transition: all ease-in-out 0.2s;
+    animation: moveUpDown 1s infinite ease-in-out;
+  }
+}
+.actions {
+  display: flex;
+  justify-content: center;
+}
