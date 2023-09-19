@@ -1,0 +1,16 @@
+<section class="rxjs-example">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-description>
+        <h2 class="example-title">Interval</h2>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <h2>
+      Now {{ time | date : "hh:mm:ss" }}
+
+      <hr />
+      Now {{ time$ | async | date : "hh:mm:ss" }}
+    </h2>
+  </mat-expansion-panel>
+</section>

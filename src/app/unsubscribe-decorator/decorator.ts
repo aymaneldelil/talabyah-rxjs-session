@@ -15,10 +15,7 @@ export function AutoUnsubscribe() {
 
         if (property && typeof property.unsubscribe === 'function') {
           // Call the unsubscribe function to unsubscribe from the subscription
-
-          console.log('Before unsubscribe ', property);
           property.unsubscribe();
-          console.log('After unsubscribe ', property);
         }
       }
 

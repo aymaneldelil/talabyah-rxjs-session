@@ -11,12 +11,12 @@ export class ShareReplayComponent implements OnInit {
   constructor(private _http: HttpClient) {}
 
   public sharedData$ = this._http
-    .get('https://jsonplaceholder.typicode.com/todos/1')
+    .get('https://jsonplaceholder.typicode.com/todos/2')
     .pipe(
       tap((t) => {
         console.log(t);
       }),
-      shareReplay(2)
+      shareReplay(1)
     );
 
   ngOnInit(): void {}

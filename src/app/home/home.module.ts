@@ -11,6 +11,7 @@ import { ShareReplayComponent } from './share-replay/share-replay.component';
 import { TakeComponent } from './take/take.component';
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material.module';
+import { IntervalComponent } from './interval/interval.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MaterialModule } from '../material.module';
     ForkJoinComponent,
     UnsubscribeDecoratorComponent,
     HomeComponent,
+    IntervalComponent,
   ],
   imports: [
     CommonModule,
